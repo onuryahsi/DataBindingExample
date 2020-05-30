@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.onuryahsi.databindingexample.SViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SecondActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="@{viewModel.currentCarName}"
+            tools:text="Random Car Name"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:onClick="@{() -> viewModel.onChangeRandomCarNameClick()}"
+            android:text="Generate Random Car Name" />
+
+    </LinearLayout>
+</layout>

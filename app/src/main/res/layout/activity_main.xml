@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="foobar"
+            type="com.onuryahsi.databindingexample.Product" />
+
+        <variable
+            name="username"
+            type="String" />
+
+        <variable
+            name="userIP"
+            type="Integer" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/productId"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="@{String.valueOf(foobar.productId)}" />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="@{String.valueOf(foobar.productName)}" />
+
+        <TextView
+            android:id="@+id/productCategory"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="@{foobar.productCategory}" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            tools:text="@{username}" />
+
+        <TextView
+            android:id="@+id/txt_userIP"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            tools:text="@{String.valueOf(userIP)}" />
+
+    </LinearLayout>
+
+</layout>
